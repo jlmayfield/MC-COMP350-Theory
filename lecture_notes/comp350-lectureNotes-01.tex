@@ -1,0 +1,29 @@
+\documentclass[nobib]{tufte-handout}
+\usepackage{amsmath,amssymb,amsthm}
+
+
+\title{COMP 350 --- Theory \\ Lecture Notes 01 \\ Chapter 1 Summary}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Very brief summary of the key points in chapter 1.
+\end{abstract}
+
+\begin{itemize}
+  \item The first major task of theory that we encounter is the study of \textsc{computability} by means of the definition of a \textsc{computational model} and the identification of it's absolute computational limits, i.e.\ what can and cannot be computed by that model.
+
+  \item Our first model is the \textsc{finite automaton}.  It acts as a \textsc{language recognition} machine. You feed it strings and it classifies, i.e.\ \textsc{accepts}, them as belonging to a particular set, i.e.\ \textsc{language}, or not. The class of languages accepted by finite automaton is the \textsc{regular languages}.
+
+  \item Finite automaton can be \textsc{deterministic}, a DFA, or \textsc{nondeterministic}, a NFA\@. The two types of machines are equivalent in that there exists both an DFA and an NFA that accepts every regular language. This can be proven by giving a method for constructing DFAs given an NFA such that the DFA recognizes the exact same language as the given NFA\@. Such a DFA is said to \textsc{simulate} the given NFA\@.
+
+  \item  Regular languages are \textsc{closed}, meaning the language that results is also regular, under the operations of union, concatenation, and the star operator.  Proving this is done by constructing finite automaton  that accept the resultant language.
+
+  \item Regular languages can be expressed using \textsc{regular expressions}, which capture the logic of regular operators. By giving a method of constructing finite automate given regular expressions, we can prove that regular expressions capture the class of regular languages and only that class, i.e.\ they are equivalent to finite automaton.
+
+  \item The \textsc{pumping lemma} states a property that is shared by all regular languages. We use violations of this property as the basis for a proof by contradiction that a language is not regular. This our first encounter with an impossibility theorem and proof, i.e.\ proofs that there exists no machine in our computation model that will accept a given language.
+
+\end{itemize}
+
+\end{document}
