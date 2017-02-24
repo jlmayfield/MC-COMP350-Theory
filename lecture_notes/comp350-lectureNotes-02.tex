@@ -1,0 +1,31 @@
+\documentclass[nobib]{tufte-handout}
+\usepackage{amsmath,amssymb,amsthm}
+
+
+\title{COMP 350 --- Theory \\ Lecture Notes 02 \\ Chapter 2 Summary}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Very brief summary of the key points in chapter 2.
+\end{abstract}
+
+\begin{itemize}
+  \item We're introduced to a new class of languages known as \textit{Context-Free Languages} or \textit{CFL}s.
+
+  \item A CFL can be \textsc{derived} from a \textit{Context-Free Grammar} which is a simple recursive grammar composed of variables, terminals, and \textsc{substitution}/\textsc{production} rules for replacing variables.  Such a derivation can be represented as a parse tree where internal nodes are variables, leaves are terminals, and rules are represented by parent-child relationships.
+
+  \item Grammars can be \textit{ambiguous} in that they allow multiple parse trees for a given string. There is no guarantee that an unambiguous grammar exists for a given CFL\@.
+
+  \item \textit{Chomsky Normal Form} is a restricted form for Context-Free grammars in which rules either produce terminals or a pair of variables.  Theorem 2.9 states that all CFLs can be expressed in Chomsky normal form.
+
+  \item A non-deterministic \textit{Pushdown Automaton} (PDA) is a new machine model that incorporates stack-based memory into the finite state machine model. Theorem 2.20 asserts that the PDA machine model and the CFG model are equivalent such that every context-free language can be derived by a CFG and accepted by a PDA\@.
+
+  \item There is a pumping lemma for context-free languages that is analogous to the pumping lemma for regular languages. It is given in theorem 2.34.  For context-free languages, strings can be written as $uvxyz$ such that $uv^{i}xy^{i}z$ remains in the language for all values of $i$. The key constraints are that the substring $vxy$ is not longer than the pumping length for the language and that the combined length of $v$ and $y$ cannot be zero.
+
+  \item The class of regular languages is a proper subset of the class of context-free languages.
+
+\end{itemize}
+
+\end{document}
