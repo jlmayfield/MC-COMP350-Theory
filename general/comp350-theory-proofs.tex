@@ -32,17 +32,15 @@ The proof sketch should provide the reader with a complete picture of the overal
 
 The concluding remarks serve two purposes. They summarize the work done and then connect it to potential future work. In summarizing the theorem and its proof we open the door for connecting the content of the theorem to new ideas or the techniques of the proof to their application on other theorems. The important thing is that we take a moment at the end of the paper, when all should be crystal clear, to put the work in context and don't simply present that work in a vacuum. When done right, the problem presentation and the concluding remarks work together to place the theorem and proof into the big picture.
 
-\section{Structured Proofs}
+\section{Proofs \& Structured Proofs}
 
-We'll be using a style of proof writing advocated by Leslie Lamport\cite{Lamport2012,Lamport1993} and Uri Leron\cite{Leron1983}. The basic idea is to design and present your proof in a structured, \textit{hierarchical} fashion\sidenote{much like we do with our programs} and not in a strictly linear fashion. Before you write your first proof paper, take a moment to at least scan through the Lamport and Leron papers and get a sense for the style.
+Presenting the proof itself is a style of writing in and of itself. Your goal is the clear and concise articulation of the truth of your theorem to a human reader. This requires careful attention to your writing as it must combine mathematical formalism with prose in order to guide the reader through the ins and outs of the mathematical structure. This includes making sure the structure and form of your proof conform to what is expected for that type of proof. Readers of proofs by contradiction are looking specific markers in the argument. The same is true for all proof types. Again, I recommend Hammack's text on proofs for some basic pointers in this regard\cite{Hammack2013}
+
+I highly recommend that you think hierarchically about the parts of yoru proof and at least adopt the ideals of the proof writing style advocated by Leslie Lamport\cite{Lamport2012,Lamport1993} and Uri Leron\cite{Leron1983}. The basic idea is to design and present your proof in a structured, \textit{hierarchical} fashion\sidenote{much like we do with our programs} and not in a strictly linear fashion. Before you write your first proof paper, take a moment to at least scan through the Lamport and Leron papers and get a sense for the style.
 
 Structured proofs incrementally dig down through the logic of the proof's argument from top to bottom where each layer provides a deeper look at some or all of its parent layer. Deeper layers of the proof often contain proofs of pieces of their parents. Readers looking for a formal, yet still high-level, look at the proof can read only the top layer or two.  Readers looking to rigorously verify the correctness of the proof can read the whole thing in a top-down or bottom-up fashion. In either case, the proof is not necessarily read in the same order that it's presented on the page.
 
-The proof in your paper must clearly exhibit a hierarchical structure\sidenote{In the event that the proof requires only one layer, then you should point that out and address why this is the case for this proof.}  Lamport recommends a numbered list structure, like an outline, but you can also use subsections of increasing depth in the proof section of the paper to effectively nest the proof structure. In either case, the structure of the proof must be made clear and explicit.
-
-The proof section of your paper \textit{must} begin with a brief paragraph describing the structure of your proof, i.e.\ depth of the hierarchy and role of each level.  The previously given proof sketch informally lays down the high-level logic of the argument of the proof where this paragraph maps that argument to a hierarchical structure.
-
-The ground floor of the proof in your paper is the proven theorems and definitions of the text or explicitly cited work in theoretical computer science and mathematics. In this class we'll try to strike a balance between deep rigor as described by Lamport and brevity and high-level clarity.
+Regardless of how you structure your proof it must clearly present and articulate the core elements expected for the type of proof technique it uses. Additionally, it should clearly cite all the bedrock material on which it rests.  For our purposes that means a direct citation, by number, of a definition or theorem from the text. Finally, it should exhibit good mathematical writing style in order to facilitate the reader's understanding of the proof and ease the verification of your assertions.
 
 \section{Logistics}
 
@@ -55,9 +53,9 @@ Each paper is graded on a standard 100 point scale with the following rough rubr
     \underline{Category} & \underline{Weight} \\
       Problem Presentation & 10\% \\
       Proof Sketch & 30\% \\
-      Presentation of Proof Structure & 10\% \\
-      Quality and Clarity & 20\% \\
-      of Proof Structure \\
+      %Presentation of Proof Structure & 10\% \\
+      Quality and Clarity & 30\% \\
+      of Proof \\
       Correctness of Proof & 20\% \\
       Conclusions & 10\%
   \end{tabular}
